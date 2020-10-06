@@ -1,0 +1,44 @@
+.tree,
+.tree ul {
+  list-style: none;
+  padding-left: 10px;
+  color: brown;
+}
+
+.tree *::before {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+
+.tree a::before {
+  content: "\e802";
+  font-family: fontello;
+}
+
+.tree label::before {
+  content: "\e801";
+  font-family: fontello;
+}
+
+.tree a {
+  text-decoration: none;
+  color: brown;
+}
+
+.tree label {
+  cursor: pointer;
+}
+
+.tree input[type="checkbox"] {
+  display: none;
+}
+
+.tree input[type="checkbox"]:checked ~ ul {
+  display: none;
+}
+
+.tree input[type="checkbox"]:checked + label::before {
+  content: "\e800";
+  font-family: fontello;
+}
